@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react'
 import Home from '@/pages/index'
 
 describe('Home', () => {
-  it('renders a heading', () => {
+  it('renders a hello', () => {
     render(<Home />)
 
-    const hello = screen.getByText(/hello/i)
+    const helloElement = screen.getByText(/hello/i)
 
-    expect(hello).toBeInTheDocument()
+    expect(helloElement).toBeInTheDocument()
   })
 
   it('renders homepage unchanged', () => {
