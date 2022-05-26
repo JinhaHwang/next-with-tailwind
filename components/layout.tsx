@@ -4,7 +4,7 @@ interface Props {
   children: ReactElement
 }
 export function DefaultLayout({ children }: Props) {
-  return <div className="container mx-auto grid h-screen place-content-center">{children}</div>
+  return <div className="container mx-auto grid min-h-screen place-content-center">{children}</div>
 }
 
 export function ExampleLayout({ children }: Props) {
