@@ -1,9 +1,18 @@
 module.exports = {
-  extends: ['next/core-web-vitals', 'plugin:tailwindcss/recommended', 'prettier'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.eslint.json',
+  },
+  extends: [
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'next/core-web-vitals',
+    'plugin:tailwindcss/recommended',
+    'prettier',
+  ],
   plugins: ['tailwindcss'],
   rules: {
-    'no-var': 'error',
-    'prefer-const': 'error',
     'tailwindcss/classnames-order': [
       2,
       {
@@ -17,6 +26,8 @@ module.exports = {
       },
     ],
     'react/function-component-definition': [2, { namedComponents: 'arrow-function' }],
+    'react/jsx-props-no-spreading': 'off',
+    'react/require-default-props': 'off',
   },
   env: {
     browser: true,
