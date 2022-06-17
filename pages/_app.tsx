@@ -13,9 +13,11 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export default function App({ Component, pageProps }: AppPropsWithLayout) {
+const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => <DefaultLayout>{page}</DefaultLayout>)
 
   return <RecoilRoot>{getLayout(<Component {...pageProps} />)}</RecoilRoot>
 }
+
+export default App
