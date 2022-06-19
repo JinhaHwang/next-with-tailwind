@@ -12,6 +12,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.4",
     "classnames": "^2.3.1",
     "next": "latest",
     "react": "^18.1.0",
